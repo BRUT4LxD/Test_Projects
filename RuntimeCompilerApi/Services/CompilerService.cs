@@ -30,11 +30,18 @@ namespace RuntimeCompilerApi.Services
             {
                 var result = compilation.Emit(fullPath);
 
-                Console.WriteLine(result.Success ? "Sucess!!" : "Failed");
+                if (!result.Success)
+                {
+                    throw new CompilerException("I think that compiling has failed.");
+                }
+            }
+            catch (CompilerException cp)
+            {
+                return cp.Message;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                throw new CompilerException("I think that compiling has failed.", ex);
             }
             return InvokeDll(fullPath);
         }
@@ -51,11 +58,19 @@ namespace RuntimeCompilerApi.Services
             {
                 var result = compilation.Emit(fullPath);
 
-                Console.WriteLine(result.Success ? "Sucess!!" : "Failed");
+                if (!result.Success)
+                {
+                    throw new CompilerException("I think that compiling has failed.");
+                }
+
+            }
+            catch (CompilerException cp)
+            {
+                return cp.Message;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                throw new CompilerException("I think that compiling has failed.", ex);
             }
             return InvokeDll(fullPath);
         }

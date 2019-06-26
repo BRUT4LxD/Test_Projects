@@ -26,9 +26,9 @@ namespace RuntimeCompilerApi.Controllers
             return Ok(result);
         }
         [HttpGet]
-        public IActionResult Get(string codeFile, string resultFileName)
+        public IActionResult Get(string codeFileName, string resultFileName)
         {
-            object result = CompilerService.Compile(codeFile, resultFileName);
+            object result = CompilerService.Compile(codeFileName, resultFileName);
 
             return Ok(result);
         }
