@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDF", "PDF\PDF.csproj", "{4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuntimeCompiler", "RuntimeCompiler\RuntimeCompiler.csproj", "{DCEDA90D-FDAA-468F-BD06-636367814492}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuntimeCompilerApi", "RuntimeCompilerApi\RuntimeCompilerApi.csproj", "{39B63B42-0F34-4900-8CAA-DCF978887D60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DCEDA90D-FDAA-468F-BD06-636367814492}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCEDA90D-FDAA-468F-BD06-636367814492}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCEDA90D-FDAA-468F-BD06-636367814492}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39B63B42-0F34-4900-8CAA-DCF978887D60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39B63B42-0F34-4900-8CAA-DCF978887D60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39B63B42-0F34-4900-8CAA-DCF978887D60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39B63B42-0F34-4900-8CAA-DCF978887D60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

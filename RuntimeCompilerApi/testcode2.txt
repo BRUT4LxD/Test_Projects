@@ -1,0 +1,14 @@
+using System; 
+using System.IO; 
+namespace MathFunctions 
+{ 
+ public static class MathHelper
+ { 
+	public static void CalculateCircleArea() 
+	{ 
+		double radius = 10;
+		double result = radius * radius * System.Math.PI;
+		Console.WriteLine(result.ToString()); 
+	} 
+  } 
+}

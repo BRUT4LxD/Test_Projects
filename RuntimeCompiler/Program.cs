@@ -1,11 +1,14 @@
 using Microsoft.CSharp;
 using System;
+using System.IO;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 
 internal class Program
 {
+    private static readonly string path = "testcode.cs";
+
     private static void Main(string[] args)
     {
         Console.WriteLine("Compiling in runtime");
@@ -14,16 +17,10 @@ internal class Program
         {
             GenerateExecutable = true
         };
+        string text = File.ReadAllText(path);
+        Console.WriteLine(text);
         CompilerResults results = csc.CompileAssemblyFromSource(parameters,
-            @"using System.Linq;
-                using System;
-            class Program {
-              public static void Main(string[] args) {
-                int i = 1111;
-                Console.WriteLine(i);
-                Console.ReadKey();
-              }
-            }");
+            text);
         if (results.Errors.HasErrors)
         {
             results.Errors.Cast<CompilerError>().ToList().ForEach(error => Console.WriteLine(error.ErrorText));
