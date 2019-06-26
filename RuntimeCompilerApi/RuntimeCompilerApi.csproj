@@ -16,8 +16,4 @@
     <PackageReference Include="System.Runtime.Loader" Version="4.3.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\RuntimeCompiler\RuntimeCompiler.csproj" />
-  </ItemGroup>
-
 </Project>
